@@ -58,7 +58,6 @@ var initEntries = function (files) {
   files.forEach((file) => {
     entries[path.basename(file, path.extname(file))] = [
       path.dirname(file) + '/' + path.basename(file, path.extname(file)) + ".js",
-      //"./src/scss/" + path.basename(file, path.extname(file)) + ".scss",
       path.dirname(file).replace('js', 'scss') + '/' + path.basename(file, path.extname(file)) + ".scss",
     ];
   });
@@ -70,12 +69,6 @@ initEntries(commonEntryFiles);
 const config = {
   mode: process.env.NODE_ENV,
 
-  /*entry: {
-    common: ["./src/js/common.js", "./src/scss/common.scss"],
-    index: ["./src/js/index.js", "./src/scss/index.scss"],
-    page1: ["./src/js/page1.js", "./src/scss/page1.scss"],
-    page2: ["./src/js/page2.js", "./src/scss/page2.scss"],
-  },*/
   entry: entries,
 
   devtool: process.env.NODE_ENV !== "production" ? "source-map" : false,
