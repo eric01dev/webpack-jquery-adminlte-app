@@ -11,13 +11,13 @@ $(function () {
   Name.forEach((obj, idx) => console.log(`${idx} => ${obj}`));
 
   // Test Global Variable
-  console.log(parent.constant);
+  console.log(parent.globalVariable);
 
   $("#page1_change_button").click(function () {
-    parent.constant['Test'] = "Set on page1";
+    parent.globalVariable['test'] = "Set on page1";
   });
 
   $("#page1_check_button").click(function () {
-    console.log(parent.constant);
+    console.log(parent.globalVariable);
   });
 });

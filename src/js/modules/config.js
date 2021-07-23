@@ -1,7 +1,7 @@
 console.log("config");
 
-let constant = {
-  Test: "This is a global constant",
+let globalVariable = {
+  test: "This is a global variable",
 };
 
-module.exports = { constant };
+module.exports = { globalVariable };

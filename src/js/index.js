@@ -1,10 +1,10 @@
 console.log('index');
 
 import '../../node_modules/overlayscrollbars/js/jquery.overlayScrollbars';
-import { constant } from './modules/config';
+import { globalVariable } from './modules/config';
 
 $(function () {
     console.log('onload', 'index');
 });
 
-window.constant = constant;
+window.globalVariable = globalVariable;
